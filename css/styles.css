@@ -1,0 +1,95 @@
+*{
+    margin:0;
+  }
+  p{
+    text-align:center;
+  }
+  .main-section,.photo,.content{
+    height:100vh;
+  }
+  .main-section{
+    position:relative;
+  /*   background:green; */
+    overflow:hidden;
+    transition: background-color 1800ms;
+  }
+  .portfolio{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+  display:flex;  
+  perspective: 800px;
+  }
+  .photo,.content{
+    width:50%;
+   
+  }
+  .photo{
+    visibility: visible;
+    position:relative;
+    /* background:red; */
+      text-align:center;
+      opacity:1;
+      transition: opacity 1500ms;
+      width:50%;
+  }
+.photo img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+  .photo-hide{
+    /* transform: rotate3d(1 ,1 , 1, 110deg); */
+    opacity:0;
+    animation-fill-mode: forwards;
+      transition: opacity 300ms, transform 200ms;
+      animation-name: hide-photo;
+      animation-duration: 300ms;
+  }
+ .photo-hidden{
+  visibility:hidden;
+  opacity:0;
+
+ }
+  @keyframes hide-photo {
+    99% {
+visibility: visible;
+    }
+    100% {
+visibility:collapse ;
+    }
+  }
+  .content{
+    position:absolute;
+    left:50%;
+  /*   background:blue; */
+    top:100%;
+      transition: top 500ms;
+  }
+  .content-active{
+  top:0;
+    transition: top 1800ms;
+  }
+  .content-inactive{
+   top:-100%;
+      transition: top 600ms;
+  }
+  .next-btn,.prev-btn{
+    background:white;
+  left:50%;
+    position:absolute;
+    z-index:50;
+    transform:translateX(-50%);
+  }
+  .next-btn:hover,.prev-btn:hover{
+  cursor:pointer;  
+  }
+  .next-btn{
+    bottom:20px;
+  }
+  .prev-btn{
+  top:20px;  
+  }
