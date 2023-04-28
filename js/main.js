@@ -114,22 +114,19 @@ if(c<0){
   mainSection.style.backgroundColor = ("white")
   return}else{
     if(c>0){
-      let currentRightBorder = rightBorder[c]
-      let currentLeftBorder = leftBorder[c]
-      let currentRightBorderP = rightBorderP[c]
-      let currentLeftBorderP = leftBorderP[c]
+
       previousRightBorder.classList.add("border-active")
-  previousLeftBorder.classList.add("border-active")
+      previousLeftBorder.classList.add("border-active")
       previousRightBorderP.classList.add("appear")
-  previousLeftBorderP.classList.add("appear")
+      previousLeftBorderP.classList.add("appear")
+
+
     previousSection.classList.remove("content-inactive")
     previousPhoto.classList.remove("photo-hide") 
-    currentRightBorder.classList.remove("border-active")
-    currentLeftBorder.classList.remove("border-active")
-    currentRightBorderP.classList.remove("appear")
-    currentLeftBorderP.classList.remove("appear")
+
 
 if(c>1){
+
   let backgroundColor = previousSection.getAttribute("color")
   mainSection.style.backgroundColor = (backgroundColor)
 }
@@ -138,7 +135,14 @@ if(c>1){
   let currentSection = contentSection[c]
   let currentPhoto = photoSection[c]
   let currentPortfolioSection = portfolioSection[c]
-
+  let currentRightBorder = rightBorder[c]
+  let currentLeftBorder = leftBorder[c]
+  let currentRightBorderP = rightBorderP[c]
+  let currentLeftBorderP = leftBorderP[c]
+  currentRightBorder.classList.remove("border-active")
+  currentLeftBorder.classList.remove("border-active")
+  currentRightBorderP.classList.remove("appear")
+  currentLeftBorderP.classList.remove("appear")
   currentSection.classList.remove("content-active")
   currentPhoto.classList.add("photo-hide")  
 
