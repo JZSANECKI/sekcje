@@ -60,11 +60,15 @@ const nextPage =() =>{
     let backgroundColor = currentSection.getAttribute("color")
     let previousSection = contentSection[c - 1]
     let previousPhoto = photoSection[c - 1]
+    let previousRightBorder = rightBorder[c-1]
+    let previousLeftBorder = leftBorder[c-1]
     currentPortfolioSection.style.visibility = "visible"
     
     if(c>0){
       previousSection.classList.add("content-inactive") 
       previousPhoto.classList.add("photo-hide") 
+      previousRightBorder.classList.remove("border-active")
+      previousLeftBorder.classList.remove("border-active")
     }
     mainSection.style.backgroundColor = (backgroundColor)
     currentSection.classList.add("content-active") 
@@ -80,6 +84,8 @@ const prevPage = () =>{
 console.log("teraz c to: " + c)
 let previousSection = contentSection[c-1]
 let previousPhoto = photoSection[c-1]
+let previousRightBorder = rightBorder[c-1]
+let previousLeftBorder = leftBorder[c-1]
 
 if(c===0){
 
@@ -96,9 +102,16 @@ if(c<0){
   mainSection.style.backgroundColor = ("white")
   return}else{
     if(c>0){
-    
+      let currentRightBorder = rightBorder[c]
+      let currentLeftBorder = leftBorder[c]
+      previousRightBorder.classList.add("border-active")
+  previousLeftBorder.classList.add("border-active")
     previousSection.classList.remove("content-inactive")
     previousPhoto.classList.remove("photo-hide") 
+    currentRightBorder.classList.remove("border-active")
+    currentLeftBorder.classList.remove("border-active")
+    previousRightBorder.classList.add("border-active")
+    previousLeftBorder.classList.add("border-active")
 if(c>1){
   let backgroundColor = previousSection.getAttribute("color")
   mainSection.style.backgroundColor = (backgroundColor)
@@ -108,8 +121,10 @@ if(c>1){
   let currentSection = contentSection[c]
   let currentPhoto = photoSection[c]
   let currentPortfolioSection = portfolioSection[c]
+
   currentSection.classList.remove("content-active")
   currentPhoto.classList.add("photo-hide")  
+
   currentPortfolioSection.style.visibility = "hidden" 
 }}
 
