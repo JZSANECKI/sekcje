@@ -190,17 +190,18 @@ animation-fill-mode: forwards;
 }
 @keyframes text-appear{
   0%{opacity:0}
-  50%{opacity:0}
+  40%{opacity:0}
   100%{opacity:1}  
 }
 .appear{
- animation-name: appear;
- animation-duration: 1300ms;
+ animation-name: text-appear;
+ animation-duration: 1600ms;
  animation-fill-mode: forwards; 
 }
 .my-role p,
 .my-goal p {
   font-size: 1rem;
+  opacity:0
 }
 .my-goal p {
   writing-mode: vertical-lr;

@@ -6,6 +6,8 @@ const header = document.querySelector(".header")
 const headerAddons = document.querySelectorAll(".header-addon")
 const rightBorder = document.querySelectorAll(".my-role")
 const leftBorder = document.querySelectorAll(".my-goal")
+const rightBorderP = document.querySelectorAll(".my-role p")
+const leftBorderP = document.querySelectorAll(".my-goal p")
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
 // let n = 0
@@ -46,6 +48,8 @@ const nextPage =() =>{
   let currentPortfolioSection = portfolioSection[c]
   let currentRightBorder = rightBorder[c]
   let currentLeftBorder = leftBorder[c]
+  let currentRightBorderP = rightBorderP[c]
+  let currentLeftBorderP = leftBorderP[c]
 
   if(c===0){
   header.classList.add("header-hide") 
@@ -62,6 +66,8 @@ const nextPage =() =>{
     let previousPhoto = photoSection[c - 1]
     let previousRightBorder = rightBorder[c-1]
     let previousLeftBorder = leftBorder[c-1]
+    let previousRightBorderP = rightBorderP[c-1]
+    let previousLeftBorderP = leftBorderP[c-1]
     currentPortfolioSection.style.visibility = "visible"
     
     if(c>0){
@@ -69,14 +75,18 @@ const nextPage =() =>{
       previousPhoto.classList.add("photo-hide") 
       previousRightBorder.classList.remove("border-active")
       previousLeftBorder.classList.remove("border-active")
+      previousRightBorderP.classList.remove("appear")
+      previousLeftBorderP.classList.remove("appear")
     }
     mainSection.style.backgroundColor = (backgroundColor)
     currentSection.classList.add("content-active") 
     currentPhoto.classList.remove("photo-hide") 
     currentRightBorder.classList.add("border-active")
     currentLeftBorder.classList.add("border-active")
+    currentRightBorderP.classList.add("appear")
+    currentLeftBorderP.classList.add("appear")
     c++;
-    console.log("w gotowości jest: "+c)
+    console.log("w gotowości jest: " + c)
 }}
 
 const prevPage = () =>{
@@ -86,6 +96,8 @@ let previousSection = contentSection[c-1]
 let previousPhoto = photoSection[c-1]
 let previousRightBorder = rightBorder[c-1]
 let previousLeftBorder = leftBorder[c-1]
+let previousRightBorderP = rightBorderP[c-1]
+let previousLeftBorderP = leftBorderP[c-1]
 
 if(c===0){
 
@@ -104,14 +116,19 @@ if(c<0){
     if(c>0){
       let currentRightBorder = rightBorder[c]
       let currentLeftBorder = leftBorder[c]
+      let currentRightBorderP = rightBorderP[c]
+      let currentLeftBorderP = leftBorderP[c]
       previousRightBorder.classList.add("border-active")
   previousLeftBorder.classList.add("border-active")
+      previousRightBorderP.classList.add("appear")
+  previousLeftBorderP.classList.add("appear")
     previousSection.classList.remove("content-inactive")
     previousPhoto.classList.remove("photo-hide") 
     currentRightBorder.classList.remove("border-active")
     currentLeftBorder.classList.remove("border-active")
-    previousRightBorder.classList.add("border-active")
-    previousLeftBorder.classList.add("border-active")
+    currentRightBorderP.classList.remove("appear")
+    currentLeftBorderP.classList.remove("appear")
+
 if(c>1){
   let backgroundColor = previousSection.getAttribute("color")
   mainSection.style.backgroundColor = (backgroundColor)
