@@ -64,6 +64,36 @@ a:hover {
   overflow: hidden;
   transition: background-color 1800ms;
 }
+.hide{
+  visibility:hidden ;
+}
+.down-arrow{
+  position: absolute;
+  width:5%;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+opacity:0.3;
+}
+.email-link{
+  position: absolute;
+  top:50%;
+  right:1%;
+  transform: rotateZ(-90deg);
+  z-index: 5;
+}
+.email-link a{
+  display: inline-block;
+
+  transform:translateX(50%);
+  height: auto;
+transition: color 300ms;
+  width: auto;
+}
+.email-link a:hover{
+  color:teal;
+  filter: none;
+}
 .portfolio {
   visibility: hidden;
   position: absolute;
@@ -71,7 +101,8 @@ a:hover {
   right: 0;
   top: 0;
   bottom: 0;
-  display: flex;
+  /* display: flex; */
+
   perspective: 800px;
 }
 .photo,
@@ -143,6 +174,16 @@ a:hover {
 .my-role {
   margin: 0 1rem 0 1rem;
   border-left: solid 1px black;
+
+}
+.border-active{
+animation-name: border-slide;
+animation-duration: 1300ms;  
+}
+@keyframes border-slide{
+0%{height:0%}
+30%{height:0%}
+100%{height:100%}  
 }
 .my-role p,
 .my-goal p {
@@ -186,4 +227,19 @@ a:hover {
 }
 .prev-btn {
   top: 20px;
+}
+
+@media (max-width:576px) {
+
+.portfolio{
+  display: flex;
+  flex-direction: column;
+}
+.photo{
+  /* position: relative; */
+  width: 100%;
+}
+.content{
+  background-color: #ffffff9a;
+}
 }

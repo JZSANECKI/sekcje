@@ -3,6 +3,9 @@ const contentSection = document.querySelectorAll(".content-plane")
 const photoSection = document.querySelectorAll(".photo")
 const portfolioSection = document.querySelectorAll(".portfolio")
 const header = document.querySelector(".header")
+const headerAddons = document.querySelectorAll(".header-addon")
+const rightBorder = document.querySelectorAll(".my-role")
+const leftBorder = document.querySelectorAll(".my-goal")
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
 // let n = 0
@@ -41,16 +44,20 @@ const nextPage =() =>{
   let currentSection = contentSection[c]
   let currentPhoto = photoSection[c]
   let currentPortfolioSection = portfolioSection[c]
-  let backgroundColor = currentSection.getAttribute("color")
-  console.log(backgroundColor)
+  let currentRightBorder = rightBorder[c]
+  let currentLeftBorder = leftBorder[c]
+
   if(c===0){
-  header.classList.add("header-hide")  
+  header.classList.add("header-hide") 
+  headerAddons.forEach (element => element.classList.add("hide") )
+
+  
   }
   if(currentSection === undefined){
     console.log("nie ma następnej sekcji")
     return
   }  else{
-    
+    let backgroundColor = currentSection.getAttribute("color")
     let previousSection = contentSection[c - 1]
     let previousPhoto = photoSection[c - 1]
     currentPortfolioSection.style.visibility = "visible"
@@ -62,6 +69,8 @@ const nextPage =() =>{
     mainSection.style.backgroundColor = (backgroundColor)
     currentSection.classList.add("content-active") 
     currentPhoto.classList.remove("photo-hide") 
+    currentRightBorder.classList.add("border-active")
+    currentLeftBorder.classList.add("border-active")
     c++;
     console.log("w gotowości jest: "+c)
 }}
@@ -72,16 +81,28 @@ console.log("teraz c to: " + c)
 let previousSection = contentSection[c-1]
 let previousPhoto = photoSection[c-1]
 
-let backgroundColor = previousSection.getAttribute("color")
+if(c===0){
+
+  mainSection.style.backgroundColor = ("white") 
+  header.classList.remove("header-hide")  
+  headerAddons.forEach (element => element.classList.remove("hide") )
+  console.log("powinien pojawić się header")
+}
+
 if(c<0){
   console.log("c mniejsze od 0")
   c=0
   console.log("ustawiam c na: " + c)
   mainSection.style.backgroundColor = ("white")
   return}else{
-  if(c>0){
+    if(c>0){
+    
     previousSection.classList.remove("content-inactive")
     previousPhoto.classList.remove("photo-hide") 
+if(c>1){
+  let backgroundColor = previousSection.getAttribute("color")
+  mainSection.style.backgroundColor = (backgroundColor)
+}
 
   }
   let currentSection = contentSection[c]
@@ -90,7 +111,6 @@ if(c<0){
   currentSection.classList.remove("content-active")
   currentPhoto.classList.add("photo-hide")  
   currentPortfolioSection.style.visibility = "hidden" 
-  mainSection.style.backgroundColor = (backgroundColor)
 }}
 
 onwheel = (event) => { // animacje powinny trwać 2 sekundy, wtedy powinno być gites
