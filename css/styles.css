@@ -1,95 +1,189 @@
-*{
-    margin:0;
-  }
-  p{
-    text-align:center;
-  }
-  .main-section,.photo,.content{
-    height:100vh;
-  }
-  .main-section{
-    position:relative;
+* {
+  margin: 0;
+}
+
+.screen {
+  position: relative;
+  scroll-snap-align: start;
+  /* background: rgb(236, 236, 236); */
+  height: 100vh;
+  /* width: 100vw; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.header-hide {
+  visibility: collapse;
+}
+
+p {
+  font-family: "Monoton", cursive;
+  display: inline;
+  font-size: 5vw;
+  text-align: center;
+}
+.shadow-text:hover {
+  cursor: default;
+}
+a,
+.my-role p,
+.my-goal p {
+  font-family: "Comfortaa", cursive;
+}
+a {
+  display: inline-block;
+  position: absolute;
+
+  color: black;
+  text-decoration: none;
+  z-index: 4;
+  width: 30%;
+  transition: filter 300ms;
+
+  right: 2%;
+  bottom: 2%;
+}
+a img {
+  width: 100%;
+}
+a:hover {
+  cursor: pointer;
+  filter: invert();
+}
+
+.main-section,
+.photo,
+.content {
+  height: 100vh;
+}
+.main-section {
+  position: relative;
   /*   background:green; */
-    overflow:hidden;
-    transition: background-color 1800ms;
-  }
-  .portfolio{
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-  display:flex;  
+  overflow: hidden;
+  transition: background-color 1800ms;
+}
+.portfolio {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
   perspective: 800px;
-  }
-  .photo,.content{
-    width:50%;
-   
-  }
-  .photo{
-    visibility: visible;
-    position:relative;
-    /* background:red; */
-      text-align:center;
-      opacity:1;
-      transition: opacity 1500ms;
-      width:50%;
-  }
-.photo img{
-  width:100%;
+}
+.photo,
+.content {
+  width: 50%;
+}
+.photo {
+  visibility: visible;
+  position: relative;
+  /* background:red; */
+  text-align: center;
+  opacity: 1;
+  transition: opacity 1500ms;
+  width: 50%;
+}
+.photo img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
-  
-  .photo-hide{
-    /* transform: rotate3d(1 ,1 , 1, 110deg); */
-    opacity:0;
-    animation-fill-mode: forwards;
-      transition: opacity 300ms, transform 200ms;
-      animation-name: hide-photo;
-      animation-duration: 300ms;
-  }
- .photo-hidden{
-  visibility:hidden;
-  opacity:0;
 
- }
-  @keyframes hide-photo {
-    99% {
-visibility: visible;
-    }
-    100% {
-visibility:collapse ;
-    }
+.photo-hide {
+  /* transform: rotate3d(1 ,1 , 1, 110deg); */
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transition: opacity 300ms, transform 200ms;
+  animation-name: hide-photo;
+  animation-duration: 300ms;
+}
+.photo-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+@keyframes hide-photo {
+  99% {
+    visibility: visible;
   }
-  .content{
-    position:absolute;
-    left:50%;
+  100% {
+    visibility: collapse;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
   /*   background:blue; */
-    top:100%;
-      transition: top 500ms;
-  }
-  .content-active{
-  top:0;
-    transition: top 1800ms;
-  }
-  .content-inactive{
-   top:-100%;
-      transition: top 600ms;
-  }
-  .next-btn,.prev-btn{
-    background:white;
-  left:50%;
-    position:absolute;
-    z-index:50;
-    transform:translateX(-50%);
-  }
-  .next-btn:hover,.prev-btn:hover{
-  cursor:pointer;  
-  }
-  .next-btn{
-    bottom:20px;
-  }
-  .prev-btn{
-  top:20px;  
-  }
+  top: 100%;
+  transition: top 500ms;
+}
+.content-active {
+  top: 0;
+  transition: top 800ms;
+}
+.content-inactive {
+  top: -100%;
+  transition: top 600ms;
+}
+.content-up {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+.content-up p {
+  text-align: right;
+}
+
+.my-role {
+  margin: 0 1rem 0 1rem;
+  border-left: solid 1px black;
+}
+.my-role p,
+.my-goal p {
+  font-size: 1rem;
+}
+.my-goal p {
+  writing-mode: vertical-lr;
+
+  text-align: center;
+}
+.my-role p {
+  writing-mode: vertical-rl;
+}
+.my-goal {
+  transform: rotateZ(180deg);
+  margin: 0 1rem 0 1rem;
+  border-left: solid 1px black;
+}
+
+.content-down {
+  display: flex;
+  justify-content: start;
+}
+.content-down p {
+  text-align: left;
+}
+.next-btn,
+.prev-btn {
+  background: white;
+  left: 50%;
+  position: absolute;
+  z-index: 50;
+  transform: translateX(-50%);
+}
+.next-btn:hover,
+.prev-btn:hover {
+  cursor: pointer;
+}
+.next-btn {
+  bottom: 20px;
+}
+.prev-btn {
+  top: 20px;
+}

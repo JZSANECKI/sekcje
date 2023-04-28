@@ -4,84 +4,135 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>test portfolio</title>
   </head>
   <body>
     <div class="main-section">
-      <!-- <p class="prev-btn" onclick="prevPage()">PREV</p>
-      <p class="next-btn" onclick="klik()">NEXT</p> -->
+      <div class="header">
+        <div id="screen" class="screen" onmousemove="showCoords(event)">
+          <p class="shadow-text">J</p>
+          <p class="shadow-text">A</p>
+          <p class="shadow-text">K</p>
+          <p class="shadow-text">U</p>
+          <p class="shadow-text">B</p>
+
+          <p class="shadow-text">&nbsp;</p>
+          <p class="shadow-text">S</p>
+          <p class="shadow-text">A</p>
+          <p class="shadow-text">N</p>
+          <p class="shadow-text">E</p>
+          <p class="shadow-text">C</p>
+          <p class="shadow-text">K</p>
+          <p class="shadow-text">I</p>
+        </div>
+
+        <div id="screen2" class="screen" onmousemove="showCoords(event)">
+          <p class="shadow-text">J</p>
+          <p class="shadow-text">A</p>
+          <p class="shadow-text">K</p>
+          <p class="shadow-text">U</p>
+          <p class="shadow-text">B</p>
+
+          <p class="shadow-text">&nbsp;</p>
+          <p class="shadow-text">S</p>
+          <p class="shadow-text">A</p>
+          <p class="shadow-text">N</p>
+          <p class="shadow-text">E</p>
+          <p class="shadow-text">C</p>
+          <p class="shadow-text">K</p>
+          <p class="shadow-text">I</p>
+        </div>
+      </div>
 
       <div class="portfolio" id="portfolio1">
         <div class="photo photo-hide" id="photo1">
-          <p>photo1</p>
-          <img src="https://unsplash.it/600/800?random1" />
+          <p>podbielkowska.pl</p>
+          <img src="./img/podbielkowska.webp" />
         </div>
-        <div class="content" color="#84CDCA" id="content1">
-          <p>content1</p>
-          <p>
-            "Lorem ipsum dolor sit amet, consctetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis ate irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserun mollit anim id est laborum."
-          </p>
+        <div class="content content-plane" color="#84CDCA" id="content1">
+          <div class="content-up">
+
+            <p>design<br />front-end<br /></p>
+            <div class="my-role"><p>my role</p></div>
+          </div>
+          <div class="content-down">
+            <div class="my-goal"><p>my goal</p></div>
+            <p>simplicity<br />bilingual<br />rwd<br /></p>
+            <a href="http://podbielkowska.pl"
+              ><img src="./img/visit-site.svg" alt=""
+            /></a>
+          </div>
         </div>
       </div>
       <div class="portfolio" id="portfolio2">
         <div class="photo photo-hide" id="photo2">
-          <p>photo2</p>
-          <img src="https://unsplash.it/600/800?random2" />
+          <p>wiecejnizmama.pl</p>
+          <img src="./img/wiecejnizmama2.png" />
         </div>
-        <div class="content" color="#D8D3CF" id="content2">
-          <p>content2</p>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Exepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
+        <div class="content content-plane" color="#D8D3CF" id="content2">
+          <div class="content-up">
+
+            <p>design<br />front-end<br /></p>
+            <div class="my-role"><p>my role</p></div>
+          </div>
+          <div class="content-down">
+            <div class="my-goal"><p>my goal</p></div>
+            <p>womalny<br />inforative<br />rwd<br /></p>
+            <a href="http://wiecejnizmama.pl/"
+              ><img src="./img/visit-site.svg" alt=""
+            /></a>
+          </div>
         </div>
       </div>
       <div class="portfolio" id="portfolio3">
         <div class="photo photo-hide" id="photo3">
-          <p>photo3</p>
-          <img src="https://unsplash.it/600/800?random3" />
+          <p>cichochat.pl</p>
+          <img src="./img/cichochat.webp" />
         </div>
-        <div class="content" color="#FBD6C6" id="content3">
-          <p>content3</p>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Exepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
+        <div class="content content-plane" color="#FBD6C6" id="content3">
+          <div class="content-up">
+
+            <p>design<br />front-end<br /></p>
+            <div class="my-role"><p>my role</p></div>
+          </div>
+          <div class="content-down">
+            <div class="my-goal"><p>my goal</p></div>
+            <p>simplicity<br />bilingual<br />rwd<br /></p>
+            <a href="http://cichochat.pl/"
+              ><img src="./img/visit-site.svg" alt=""
+            /></a>
+          </div>
         </div>
       </div>
       <div class="portfolio" id="portfolio4">
         <div class="photo photo-hide" id="photo4">
-          <p>photo4</p>
+          <p>przemyslawrozewicz.pl</p>
           <img src="https://unsplash.it/600/800?random4" />
         </div>
-        <div class="content" color="#84CDCA" id="content4">
-          <p>content4</p>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Exepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
+        <div class="content content-plane" color="#84CDCA" id="content4">
+          <div class="content-up">
+
+            <p>design<br />front-end<br /></p>
+            <div class="my-role"><p>my role</p></div>
+          </div>
+          <div class="content-down">
+            <div class="my-goal"><p>my goal</p></div>
+            <p>lil funky<br />eye catching<br/>rwd<br /></p>
+            <a href="http://przemyslawrozewicz.pl"
+              ><img src="./img/visit-site.svg" alt=""
+            /></a>
+          </div>
         </div>
       </div>
     </div>
