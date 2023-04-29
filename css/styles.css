@@ -64,34 +64,34 @@ a:hover {
   overflow: hidden;
   transition: background-color 1800ms;
 }
-.hide{
-  visibility:hidden ;
+.hide {
+  visibility: hidden;
 }
-.down-arrow{
+.down-arrow {
   position: absolute;
-  width:5%;
-  bottom:0;
-  left:50%;
+  width: 5%;
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
-opacity:0.3;
+  opacity: 0.3;
 }
-.email-link{
+.email-link {
   position: absolute;
-  top:50%;
-  right:1%;
+  top: 50%;
+  right: 1%;
   transform: rotateZ(-90deg);
   z-index: 5;
 }
-.email-link a{
+.email-link a {
   display: inline-block;
 
-  transform:translateX(50%);
+  transform: translateX(50%);
   height: auto;
-transition: color 300ms;
+  transition: color 300ms;
   width: auto;
 }
-.email-link a:hover{
-  color:teal;
+.email-link a:hover {
+  color: teal;
   filter: none;
 }
 .portfolio {
@@ -167,60 +167,85 @@ transition: color 300ms;
   display: flex;
   /* width: 100%; */
 }
-.content-up-container{
+.content-up-container {
   text-align: right;
   overflow: hidden;
   width: 0%;
 
   transition-timing-function: ease-in-out;
 }
-.content-container-active{
-animation-name: content-container-slide;
-animation-duration: 1800ms;
-animation-fill-mode: forwards;
+.content-container-active {
+  animation-name: content-container-slide;
+  animation-duration: 1800ms;
+  animation-fill-mode: forwards;
 }
+.content-down {
+  display: flex;
+  justify-content: center;
+}
+.content-down-container {
+  text-align: left;
+  overflow: hidden;
+  width: 0%;
+}
+
 @keyframes content-container-slide {
-  0%{width:0%}
-  50%{width:0%}
-  100%{width:100%}
-  
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .content-up p {
   text-align: right;
 }
 
-.my-role {
-  margin: 0 1rem 0 1rem;
-  border-left: solid 1px black;
-  height:0%;
-  transition: height 800ms;
-
+.content-down p {
+  text-align: left;
 }
-.border-active{
-animation-name: border-slide;
-animation-duration: 1300ms;  
-animation-fill-mode: forwards;
-
+.content-up p,.content-down p{
+  font-size: 4vw;
 }
-@keyframes border-slide{
-0%{height:0%}
-20%{height:0%}
-100%{height:100%}  
+.border-active {
+  animation-name: border-slide;
+  animation-duration: 1300ms;
+  animation-fill-mode: forwards;
 }
-@keyframes text-appear{
-  0%{opacity:0}
-  40%{opacity:0}
-  100%{opacity:1}  
+@keyframes border-slide {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
 }
-.appear{
- animation-name: text-appear;
- animation-duration: 1600ms;
- animation-fill-mode: forwards; 
+@keyframes text-appear {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.appear {
+  animation-name: text-appear;
+  animation-duration: 1600ms;
+  animation-fill-mode: forwards;
 }
 .my-role p,
 .my-goal p {
   font-size: 1rem;
-  opacity:0
+  opacity: 0;
 }
 .my-goal p {
   writing-mode: vertical-lr;
@@ -230,19 +255,18 @@ animation-fill-mode: forwards;
 .my-role p {
   writing-mode: vertical-rl;
 }
+.my-role {
+  margin: 0 1rem 0 1rem;
+  border-left: solid 1px black;
+  height: 0%;
+  transition: height 800ms;
+}
 .my-goal {
   transform: rotateZ(180deg);
   margin: 0 1rem 0 1rem;
   border-left: solid 1px black;
 }
 
-.content-down {
-  display: flex;
-  justify-content: start;
-}
-.content-down p {
-  text-align: left;
-}
 .next-btn,
 .prev-btn {
   background: white;
@@ -262,17 +286,16 @@ animation-fill-mode: forwards;
   top: 20px;
 }
 
-@media (max-width:576px) {
-
-.portfolio{
-  display: flex;
-  flex-direction: column;
-}
-.photo{
-  /* position: relative; */
-  width: 100%;
-}
-.content{
-  background-color: #ffffff9a;
-}
+@media (max-width: 576px) {
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+  }
+  .photo {
+    /* position: relative; */
+    width: 100%;
+  }
+  .content {
+    background-color: #ffffff9a;
+  }
 }
