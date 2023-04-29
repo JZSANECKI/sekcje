@@ -37,8 +37,8 @@ document.addEventListener('touchstart', e => {
 
 document.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenY
+  checkDirection()
 })
-checkDirection()
 
 
 
