@@ -11,6 +11,8 @@ const rightBorderP = document.querySelectorAll(".my-role p")
 const leftBorderP = document.querySelectorAll(".my-goal p")
 const contentUpContainer = document.querySelectorAll(".content-up-container")
 const contentDownContainer = document.querySelectorAll(".content-down-container")
+
+
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
 // let n = 0
@@ -18,15 +20,37 @@ let m = 0 // mouse wheel blocker
 const pageWidth = window.innerWidth;
 const pageHeight = window.innerHeight;
 const letter = document.querySelectorAll(".shadow-text")
+console.log(window.innerWidth)
+
+
+let touchstartY = 0
+let touchendY = 0
+    
+function checkDirection() {
+  if (touchendY < touchstartY) alert('swiped up!')
+  if (touchendY > touchstartY) alert('swiped down!')
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartY = e.changedTouches[0].screenY
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenY
+})
+checkDirection()
 
 
 
-let showCoords = (event) => {
-    x = event.clientX;
-    y = event.clientY;
-    text = "X coords: " + x + ", Y coords: " + y;
-    const letterAxis = letter.offsetLeft + (letter.offsetWidth / 2)
 
+
+const showCoords = (event) => {
+  x = event.clientX;
+  y = event.clientY;
+  text = "X coords: " + x + ", Y coords: " + y;
+  const letterAxis = letter.offsetLeft + (letter.offsetWidth / 2)
+  
+  if(window.innerWidth>768){
 
 
 
@@ -42,7 +66,8 @@ let shadowLenghtZ = Math.sqrt((shadowLenghtX * shadowLenghtX) + (shadowLenghtY *
 coord.style.textShadow = shadowLenghtX + "px " + shadowLenghtY + "px " + (shadowLenghtZ/5 + 2) + "px rgba(0, 0, 0, 0.5)"
   
 })
-}
+}}
+
 
 const nextPage =() =>{
   console.log("obecny numer sekcji w tablicy to: " + c)
