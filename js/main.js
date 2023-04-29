@@ -190,8 +190,10 @@ let touchstartY = 0
 let touchendY = 0
     
 function checkDirection() {
-  if (touchendY < touchstartY) {nextPage()}
-  if (touchendY > touchstartY) {prevPage()}
+  let swipeLenght = touchstartY - touchendY
+  console.log(swipeLenght) 
+  if (swipeLenght > 70) {nextPage()}
+  if (swipeLenght < -70) {prevPage()}
 }
 
 document.addEventListener('touchstart', e => {
