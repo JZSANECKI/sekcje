@@ -190,8 +190,8 @@ let touchstartY = 0
 let touchendY = 0
     
 function checkDirection() {
-  if (touchendY < touchstartY) prevPage()
-  if (touchendY > touchstartY) nextPage()
+  if (touchendY < touchstartY) {nextPage()}
+  if (touchendY > touchstartY) {prevPage()}
 }
 
 document.addEventListener('touchstart', e => {
