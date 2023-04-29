@@ -163,9 +163,27 @@ transition: color 300ms;
   transition: top 600ms;
 }
 .content-up {
-  justify-content: flex-end;
+  justify-content: center;
   display: flex;
-  width: 100%;
+  /* width: 100%; */
+}
+.content-up-container{
+  text-align: right;
+  overflow: hidden;
+  width: 0%;
+
+  transition-timing-function: ease-in-out;
+}
+.content-container-active{
+animation-name: content-container-slide;
+animation-duration: 1800ms;
+animation-fill-mode: forwards;
+}
+@keyframes content-container-slide {
+  0%{width:0%}
+  50%{width:0%}
+  100%{width:100%}
+  
 }
 .content-up p {
   text-align: right;
@@ -175,13 +193,14 @@ transition: color 300ms;
   margin: 0 1rem 0 1rem;
   border-left: solid 1px black;
   height:0%;
-  transition: height 300ms;
+  transition: height 800ms;
 
 }
 .border-active{
 animation-name: border-slide;
 animation-duration: 1300ms;  
 animation-fill-mode: forwards;
+
 }
 @keyframes border-slide{
 0%{height:0%}

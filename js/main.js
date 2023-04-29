@@ -1,3 +1,4 @@
+
 const mainSection = document.querySelector(".main-section")
 const contentSection = document.querySelectorAll(".content-plane")
 const photoSection = document.querySelectorAll(".photo")
@@ -8,6 +9,7 @@ const rightBorder = document.querySelectorAll(".my-role")
 const leftBorder = document.querySelectorAll(".my-goal")
 const rightBorderP = document.querySelectorAll(".my-role p")
 const leftBorderP = document.querySelectorAll(".my-goal p")
+const contentUpContainer = document.querySelectorAll(".content-up-container")
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
 // let n = 0
@@ -50,6 +52,7 @@ const nextPage =() =>{
   let currentLeftBorder = leftBorder[c]
   let currentRightBorderP = rightBorderP[c]
   let currentLeftBorderP = leftBorderP[c]
+  let currentContentUpContainer = contentUpContainer[c]
 
   if(c===0){
   header.classList.add("header-hide") 
@@ -68,6 +71,7 @@ const nextPage =() =>{
     let previousLeftBorder = leftBorder[c-1]
     let previousRightBorderP = rightBorderP[c-1]
     let previousLeftBorderP = leftBorderP[c-1]
+    let previousContentUpContainer = contentUpContainer[c-1]
     currentPortfolioSection.style.visibility = "visible"
     
     if(c>0){
@@ -77,6 +81,7 @@ const nextPage =() =>{
       previousLeftBorder.classList.remove("border-active")
       previousRightBorderP.classList.remove("appear")
       previousLeftBorderP.classList.remove("appear")
+      previousContentUpContainer.classList.remove("content-container-active")
     }
     mainSection.style.backgroundColor = (backgroundColor)
     currentSection.classList.add("content-active") 
@@ -85,6 +90,7 @@ const nextPage =() =>{
     currentLeftBorder.classList.add("border-active")
     currentRightBorderP.classList.add("appear")
     currentLeftBorderP.classList.add("appear")
+    currentContentUpContainer.classList.add("content-container-active")
     c++;
     console.log("w gotowości jest: " + c)
 }}
@@ -155,7 +161,7 @@ m = 1
 let scrollMoveY = event.deltaY
 if(scrollMoveY<0){prevPage()}
 if(scrollMoveY>0){nextPage()}
-setTimeout(() => {m = 0;}, 2000);
+setTimeout(() => {m = 0;}, 1500);
 }
 };
 
