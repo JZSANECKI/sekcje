@@ -1,7 +1,7 @@
 * {
   margin: 0;
 }
-body{
+body {
   overscroll-behavior-y: contain;
 }
 
@@ -32,7 +32,8 @@ p {
 }
 a,
 .my-role p,
-.my-goal p, .photo-description {
+.my-goal p,
+.photo-description {
   font-family: "Comfortaa", cursive;
 }
 a {
@@ -53,7 +54,6 @@ a img {
 }
 a:hover {
   cursor: pointer;
-
 }
 
 .main-section,
@@ -65,7 +65,7 @@ a:hover {
   position: relative;
   /*   background:green; */
   overflow: hidden;
-  transition: background-color 1800ms;
+  transition: background-color 800ms;
 }
 .hide {
   visibility: hidden;
@@ -108,38 +108,33 @@ a:hover {
 
   perspective: 800px;
 }
-.photo-content{
-
+.photo-content {
   position: absolute;
   z-index: 50;
-  bottom:0;
+  bottom: 0;
   text-align: left;
-  padding:0 2rem 2rem 2rem;
+  padding: 0 2rem 2rem 2rem;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.photo-title{
+.photo-title {
   /* position: absolute; */
-font-size: 2.5vw;
-color: white;
+  font-size: 2.5vw;
+  color: white;
 
-text-align: left;
-
+  text-align: left;
 }
-.photo-description{
-  text-align:right;
+.photo-description {
+  text-align: right;
 
+  color: white;
 
-  color:white;
-
-font-size: 1vw;
-
+  font-size: 1vw;
 }
 .photo,
 .content {
   width: 50%;
 }
 .photo {
-
   visibility: visible;
   position: relative;
   text-align: center;
@@ -149,26 +144,18 @@ font-size: 1vw;
 }
 
 .photo img {
-
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 1;
-
 }
 .photo video {
- 
   width: 100%;
   height: 100%;
   object-fit: cover;
   /* opacity: 0.6; */
   filter: blur(2px);
   filter: brightness(0.9);
-  
-  
-  
-  
-
 }
 .photo-hide {
   /* transform: rotate3d(1 ,1 , 1, 110deg); */
@@ -253,7 +240,8 @@ font-size: 1vw;
 .content-down p {
   text-align: left;
 }
-.content-up p,.content-down p{
+.content-up p,
+.content-down p {
   font-size: 4vw;
 }
 .border-active {
@@ -313,48 +301,26 @@ font-size: 1vw;
   border-left: solid 1px black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px){
-.shadow-text{
-  font-size: 8vw;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-}  
+@media (max-width: 768px) {
+  .shadow-text {
+    font-size: 8vw;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 576px) {
-  .content{
-    width:100%;
-    left:0;
+  .content {
+    width: 100%;
+    left: 0;
   }
-  .content-up-container p,.content-down-container p{
-font-size: 8vw;
-color:white;
-  }
-  .shadow-text{
+  .content-up-container p,
+  .content-down-container p {
     font-size: 8vw;
-
-  } 
+    color: white;
+  }
+  .shadow-text {
+    font-size: 8vw;
+  }
   .portfolio {
     display: flex;
     flex-direction: column;
@@ -363,16 +329,17 @@ color:white;
     /* position: relative; */
     width: 100%;
   }
-  .photo video{
-filter: blur(5px);
-filter: brightness(0.4);
+  .photo video {
+    filter: blur(5px);
+    filter: brightness(0.4);
   }
-  .photo-title{
+  .photo-title {
     font-size: 5vw;
   }
-  .photo-description{
+  .photo-description {
     font-size: 3vw;
   }
   .photo img {
-    filter: brightness(0.8);}
+    filter: brightness(0.8);
+  }
 }

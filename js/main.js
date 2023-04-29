@@ -12,7 +12,6 @@ const leftBorderP = document.querySelectorAll(".my-goal p")
 const contentUpContainer = document.querySelectorAll(".content-up-container")
 const contentDownContainer = document.querySelectorAll(".content-down-container")
 
-
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
 // let n = 0
@@ -22,10 +21,6 @@ const pageHeight = window.innerHeight;
 const letter = document.querySelectorAll(".shadow-text")
 console.log(window.innerWidth)
 
-
-
-
-
 const showCoords = (event) => {
   x = event.clientX;
   y = event.clientY;
@@ -34,22 +29,17 @@ const showCoords = (event) => {
   
   if(window.innerWidth>768){ // dynamic shadow only on desktop
 
-
-
-letter.forEach( coord =>{
+    letter.forEach( coord =>{
   const letterAxisX = coord.offsetLeft + (coord.offsetWidth / 2)
     const letterAxisY = coord.offsetTop + (coord.offsetHeight / 2)
 let shadowLenghtX = ((Math.abs(letterAxisX - x)/100 * (letterAxisX - x)))
 let shadowLenghtY = ((Math.abs(letterAxisY - y)/500 * (letterAxisY - y)))
-
-  
 
 let shadowLenghtZ = Math.sqrt((shadowLenghtX * shadowLenghtX) + (shadowLenghtY * shadowLenghtY))
 coord.style.textShadow = shadowLenghtX + "px " + shadowLenghtY + "px " + (shadowLenghtZ/5 + 2) + "px rgba(0, 0, 0, 0.5)"
   
 })
 }}
-
 
 const nextPage =() =>{
   console.log("obecny numer sekcji w tablicy to: " + c)
@@ -146,9 +136,10 @@ if(c<0){
     previousPhoto.classList.remove("photo-hide") 
 
 
-if(c>1){
+if(c>=1){
 
   let backgroundColor = previousSection.getAttribute("color")
+  console.log(backgroundColor)
   mainSection.style.backgroundColor = (backgroundColor)
 }
 
