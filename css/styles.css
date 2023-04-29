@@ -59,7 +59,7 @@ a:hover {
 .main-section,
 .photo,
 .content {
-  height: 100vh;
+  height: 100svh;
 }
 .main-section {
   position: relative;
@@ -289,7 +289,19 @@ a:hover {
   top: 20px;
 }
 
+
+@media (max-width: 768px){
+.shadow-text{
+  font-size: 8vw;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}  
+}
+
 @media (max-width: 576px) {
+  .shadow-text{
+    font-size: 8vw;
+
+  } 
   .portfolio {
     display: flex;
     flex-direction: column;

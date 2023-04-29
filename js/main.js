@@ -32,7 +32,7 @@ const showCoords = (event) => {
   text = "X coords: " + x + ", Y coords: " + y;
   const letterAxis = letter.offsetLeft + (letter.offsetWidth / 2)
   
-  if(window.innerWidth>768){
+  if(window.innerWidth>768){ // dynamic shadow only on desktop
 
 
 
