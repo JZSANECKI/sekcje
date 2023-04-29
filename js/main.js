@@ -23,24 +23,6 @@ const letter = document.querySelectorAll(".shadow-text")
 console.log(window.innerWidth)
 
 
-let touchstartY = 0
-let touchendY = 0
-    
-function checkDirection() {
-  if (touchendY < touchstartY) alert('swiped up!')
-  if (touchendY > touchstartY) alert('swiped down!')
-}
-
-document.addEventListener('touchstart', e => {
-  touchstartY = e.changedTouches[0].screenY
-})
-
-document.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenY
-  checkDirection()
-})
-
-
 
 
 
@@ -202,6 +184,25 @@ setTimeout(() => {m = 0;}, 1500);
 }
 };
 
+// SWIPE
 
+let touchstartY = 0
+let touchendY = 0
+    
+function checkDirection() {
+  if (touchendY < touchstartY) prevPage()
+  if (touchendY > touchstartY) nextPage()
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartY = e.changedTouches[0].screenY
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenY
+  checkDirection()
+})
+
+// SWIPE
 
 
