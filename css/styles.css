@@ -359,6 +359,13 @@ color: white;
   margin: 0 1rem 0 1rem;
   border-left: solid 1px black;
 }
+.contact{
+left:0;
+width: 100vw;
+}
+.about-me-title{
+  font-size: 6vw;
+}
 
 @media (max-width: 768px) {
   .shadow-text {
@@ -371,6 +378,7 @@ color: white;
 }
 
 @media (max-width: 576px) {
+
   .content a{
 
     text-align: right;    
@@ -425,5 +433,10 @@ margin: 0 2rem 0 2rem;
     color: white;
   }
 
-
+.contact p{
+  font-size: 5vw;
+}
+.about-me-title{
+  font-size: 12vw;
+}
 }
