@@ -33,7 +33,7 @@ p {
 a,
 .my-role p,
 .my-goal p,
-.photo-description {
+.photo-description,.creative-title h2 {
   font-family: "Comfortaa", cursive;
 }
 a {
@@ -69,6 +69,15 @@ a:hover {
 }
 .hide {
   visibility: hidden;
+}
+.creative-title{
+  position: absolute;
+  top:55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.creative-title h2{
+  font-size: 1.5vw;
 }
 .down-arrow {
   position: absolute;
@@ -304,7 +313,10 @@ a:hover {
 @media (max-width: 768px) {
   .shadow-text {
     font-size: 8vw;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+  .creative-title h2{
+    font-size: 3vw;
   }
 }
 
