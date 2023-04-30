@@ -372,8 +372,10 @@ color: white;
 
 @media (max-width: 576px) {
   .content a{
-    text-align: right;    border-bottom: solid 1px white;
 
+    text-align: right;    
+    border-bottom: solid 1px white;
+margin: 0 2rem 0 2rem;
     }
     .content a p{
 
