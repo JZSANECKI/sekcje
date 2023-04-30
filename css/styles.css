@@ -65,6 +65,9 @@ a,
 .photo-description,.creative-title h2 {
   font-family: "Comfortaa", cursive;
 }
+.header p{
+  padding:0;
+}
 .header-addon a {
   display: inline-block;
   position: absolute;
