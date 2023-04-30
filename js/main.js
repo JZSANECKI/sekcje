@@ -14,6 +14,7 @@ const contentDownContainer = document.querySelectorAll(".content-down-container"
 const logo = document.querySelector(".nav-menu p")
 const navLink = document.querySelectorAll(".nav-menu a")
 const navMenu = document.querySelector(".nav-menu")
+const descriptionSection = document.querySelectorAll(".photo-description")
 console.log(navLink)
 
 let c = 0 //content section counter
