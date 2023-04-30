@@ -8,6 +8,7 @@ body {
   overscroll-behavior-y: contain;
 }
 .nav-menu{
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,17 +17,19 @@ body {
   width:50vw;
   z-index: 600;
 /* filter: invert(1); */
-color: white;
+
 }
 
 .nav-menu a{
-  color: white;
+  color: black;
   margin: 0 2rem 0 0;
   text-decoration: none;
 }
 .nav-menu p{
+  color: black;
   font-size: 2rem;
   padding: 0 0 0 2rem;
+  user-select: none;
 }
 .nav-menu p:hover{
   cursor: pointer;
