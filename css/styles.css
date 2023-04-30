@@ -266,14 +266,20 @@ a:hover {
 text-align: right;
 border-bottom: solid 1px black;
 text-decoration: none;
-
+transition: border-bottom 300ms;
 margin: 5rem 2rem 0 2rem;
 }
 .content a p{
   font-family: "Comfortaa", cursive;
   color: black;
-font-size: 100%;
+  font-size: 100%;
+  transition: color 300ms;
 }
+.content a p:hover{
+color: white;
+
+}
+
 
 @keyframes content-container-slide {
   0% {
