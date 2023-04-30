@@ -4,7 +4,27 @@
 body {
   overscroll-behavior-y: contain;
 }
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right:0;
+  width:50vw;
+  z-index: 600;
+/* filter: invert(1); */
+color: white;
+}
 
+.nav-menu a{
+  color: white;
+  margin: 0 2rem 0 0;
+  text-decoration: none;
+}
+.nav-menu p{
+  font-size: 2rem;
+  padding: 0 0 0 2rem;
+}
 .screen {
   position: relative;
   scroll-snap-align: start;
@@ -36,7 +56,7 @@ a,
 .photo-description,.creative-title h2 {
   font-family: "Comfortaa", cursive;
 }
-a {
+.header-addon a {
   display: inline-block;
   position: absolute;
 
@@ -321,6 +341,9 @@ a:hover {
 }
 
 @media (max-width: 576px) {
+  .nav-menu{
+    width: 100vw;
+  }
   .content {
     width: 100%;
     left: 0;
