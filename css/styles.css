@@ -354,4 +354,12 @@ a:hover {
   .photo img {
     filter: brightness(0.8);
   }
+  .my-goal,.my-role{
+    border-left: solid 1px white;
+  }
+  .my-goal p,.my-role p{
+    color: white;
+  }
+
+
 }
