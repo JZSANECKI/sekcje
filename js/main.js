@@ -60,6 +60,46 @@ coord.style.textShadow = shadowLenghtX + "px " + shadowLenghtY + "px " + (shadow
   
 })
 }}
+const contactLink = ()=>{
+
+  nextPage(c)
+  nextPage(c+1)
+  nextPage(c+3)
+  nextPage(c+4)
+  nextPage(c+5)
+  nextPage(c+6)
+}
+const portfolioLink =()=>{
+c=0  
+nextPage(c)
+nextPage(c+1)
+nextPage(c+3)
+nextPage(c+4)
+nextPage(c+5)
+nextPage(c+6)
+prevPage(c+6)
+prevPage(c+5)
+prevPage(c+4)
+prevPage(c+3)
+
+
+}
+const aboutLink =()=>{
+c=0  
+nextPage(c)
+nextPage(c+1)
+nextPage(c+3)
+nextPage(c+4)
+nextPage(c+5)
+nextPage(c+6)
+prevPage(c+6)
+prevPage(c+5)
+prevPage(c+4)
+prevPage(c+3)
+prevPage(c+2)
+
+
+}
 
 const nextPage =() =>{
   console.log("obecny numer sekcji w tablicy to: " + c)
