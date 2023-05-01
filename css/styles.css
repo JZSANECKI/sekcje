@@ -7,6 +7,41 @@
 body {
   overscroll-behavior-y: contain;
 }
+.loader{
+  position: absolute;
+  z-index: 500;
+  width: 100vw;
+  height: 100svh;
+  background-color: #fff;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+}
+.loader:hover{
+  overflow: hidden;
+}
+.loader object{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  
+  animation-name: loader-animation;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes loader {
+0%{opacity:1; visibility: visible;}  
+80%{opacity:1; visibility: visible;}
+100%{opacity:0; visibility: collapse;}
+}
+@keyframes loader-animation {
+0%{opacity:0.8;width: 50%;}  
+70%{opacity:0.8;width: 50%;}
+80%{opacity:0.8;width: 55%;}
+100%{opacity:0;width: 0%;}
+}
 .nav-menu{
   visibility: hidden;
   display: flex;
