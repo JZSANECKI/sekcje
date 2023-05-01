@@ -145,9 +145,7 @@ if(c>1){
 }
 
 }
-if(c===5){
-  visitSite[c-2].style.transform="translateX(-200%)"  
-}
+
     if(c>0 ){
       previousSection.classList.add("content-inactive") 
       previousPhoto.classList.add("photo-hide") 
@@ -161,6 +159,16 @@ if(c===5){
       navLink.forEach(navLink => {
         navLink.style.color = "black"})
 logo.style.color = "black"}
+    }
+    if(c===5){
+      visitSite[c-2].style.transform="translateX(-200%)"  
+      if(window.innerWidth>576){
+      navLink.forEach(navLink => {
+        navLink.style.color = "white"
+      })
+      logo.innerHTML="jakub&nbsp;sanecki"
+      logo.style.color = "white"
+      navMenu.style.width="100vw"}
     }
     mainSection.style.backgroundColor = (backgroundColor)
     currentSection.classList.add("content-active") 
@@ -229,11 +237,20 @@ if(c>=1){
   mainSection.style.backgroundColor = (backgroundColor)
 
 }
-if(c===1){
-  if(window.innerWidth>576){
+if(c===1 && window.innerWidth>576){
+
   logo.style.color = "white"
   navLink.forEach(navLink => {
-    navLink.style.color = "white"})}
+    navLink.style.color = "white"})
+}
+if(c===5 && window.innerWidth>576){
+
+  navLink.forEach(navLink => {
+    navLink.style.color = "black"
+  })
+  logo.innerHTML="js"
+  logo.style.color = "black"
+  navMenu.style.width="50vw"
 }
 
   }
