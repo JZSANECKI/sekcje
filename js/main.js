@@ -146,7 +146,14 @@ let previousRightBorderP = rightBorderP[c-1]
 let previousLeftBorderP = leftBorderP[c-1]
 let previousContentUpContainer = contentUpContainer[c-1]
 let previousContentDownContainer = contentDownContainer[c-1]
-
+if(c>1 && c<=5){
+  visitSite[c-2].style.transform="translateX(0%)" 
+  if(c<5) 
+  visitSite[c-1].style.transform="translateX(-200%)"  
+}
+if(c===1){
+  visitSite[c-1].style.transform="translateX(-200%)"  
+}
 if(c===0){
 
   mainSection.style.backgroundColor = ("white") 
