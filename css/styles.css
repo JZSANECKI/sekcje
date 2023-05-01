@@ -219,6 +219,7 @@ a:hover {
   }
 }
 .content {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,11 +264,16 @@ a:hover {
   width: 0%;
 }
 .content a{
-text-align: right;
-border-bottom: solid 1px black;
-text-decoration: none;
-transition: border-bottom 300ms;
-margin: 5rem 2rem 0 2rem;
+  text-align: right;
+  border-bottom: solid 1px black;
+  text-decoration: none;
+  transition: border-bottom 300ms;
+  margin: 5rem 2rem 0 2rem;
+  transform: translateX(-200%);
+  transition: transform 1600ms;
+}
+.content-slide{
+  transform: translateX(0%);
 }
 .content a p{
   font-family: "Comfortaa", cursive;

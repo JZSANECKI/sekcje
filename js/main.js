@@ -17,6 +17,8 @@ const navMenu = document.querySelector(".nav-menu")
 const descriptionSection = document.querySelectorAll(".photo-description")
 const photo = document.querySelectorAll(".photo")
 const content = document.querySelectorAll(".content")
+const visitSite = document.querySelectorAll(".content a")
+
 
 if(window.innerWidth<576){
 photo.forEach (photo =>{
@@ -95,8 +97,18 @@ logo.style.color = "white"
     let previousContentUpContainer = contentUpContainer[c-1]
     let previousContentDownContainer = contentDownContainer[c-1]
     currentPortfolioSection.style.visibility = "visible"
-    
-    if(c>0){
+if(c>0 && c<5){
+visitSite[c-1].style.transform="translateX(0%)"
+if(c>1){
+  visitSite[c-2].style.transform="translateX(-200%)"
+
+}
+
+}
+if(c===5){
+  visitSite[c-2].style.transform="translateX(-200%)"  
+}
+    if(c>0 ){
       previousSection.classList.add("content-inactive") 
       previousPhoto.classList.add("photo-hide") 
       previousRightBorder.classList.remove("border-active")
