@@ -403,6 +403,9 @@ margin: 0 2rem 0 2rem;
   .nav-menu a{
 margin: 0 1rem 0 0;
   }
+  .nav-menu p{
+    padding:0 0 0 1rem;
+  }
   .content {
     width: 100%;
     left: 0;
