@@ -15,7 +15,20 @@ const logo = document.querySelector(".nav-menu p")
 const navLink = document.querySelectorAll(".nav-menu a")
 const navMenu = document.querySelector(".nav-menu")
 const descriptionSection = document.querySelectorAll(".photo-description")
-console.log(navLink)
+const photo = document.querySelectorAll(".photo")
+const content = document.querySelectorAll(".content")
+
+if(window.innerWidth<576){
+photo.forEach (photo =>{
+  let photoChild = photo.firstChild.nextSibling
+  let photoSibling = photo.nextSibling.nextSibling
+  let photoHeight = photoChild.offsetHeight;
+photoSibling.style.height = window.innerHeight - photoHeight + "px"
+
+
+})
+}
+
 
 let c = 0 //content section counter
 let m = 0 // mouse wheel blocker
@@ -24,7 +37,7 @@ let m = 0 // mouse wheel blocker
 const pageWidth = window.innerWidth;
 const pageHeight = window.innerHeight;
 const letter = document.querySelectorAll(".shadow-text")
-console.log(window.innerWidth)
+
 
 const showCoords = (event) => {
   x = event.clientX;
