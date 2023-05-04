@@ -344,7 +344,7 @@ color: white;
 }
 .content-up p,
 .content-down p {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 .border-active {
   animation-name: border-slide;
@@ -406,6 +406,9 @@ color: white;
 left:0;
 width: 100vw;
 }
+.contact p{
+  font-size: 4vw;
+}
 .about-me-title{
   font-size: 6vw;
 }
@@ -448,7 +451,7 @@ margin: 0 1rem 0 0;
   }
   .content-up-container p,
   .content-down-container p {
-    font-size: 8vw;
+    font-size: 6vw;
     color: white;
   }
   .shadow-text {
